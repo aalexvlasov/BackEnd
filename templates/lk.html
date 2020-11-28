@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title%}
+LK
+{% endblock%}
+
+{% block body%}
+<h1>Привет!</h1>
+<div>
+    <ul>name: {{ name }}</ul>
+    <ul>email: {{ email }}</ul>
+    <ul>date: {{ date }}</ul>
+</div>
+<hr>
+<div>
+    <a href="/logout"> Выход </a>
+</div>
+{% endblock %}
