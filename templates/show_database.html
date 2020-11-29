@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Database - {{ database_name }}
+{% endblock%}
+
+{% block body%}
+<h1>Database - {{ database_name }}</h1>
+<div>
+    <table class="table table-dark">
+        {% for row in db %}
+        <tr>
+            {% for val in row %}
+            <td>{{ val }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</div>
+<hr>
+{% endblock %}

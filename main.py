@@ -12,12 +12,45 @@ from wtforms.validators import DataRequired, Email, Length, EqualTo
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secretkey'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+app.config['SQLALCHEMY_BINDS'] = {
+   'mortality1': 'sqlite:///mortality1.db'
+}
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 bootstrap = Bootstrap(app)
 db = SQLAlchemy(app)
 login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
+
+class Mortality1(db.Model):
+    __bind_key__ = 'mortality1'
+    id = db.Column(db.Integer, primary_key=True)
+    country = db.Column(db.String)
+    year = db.Column(db.Integer)
+    week = db.Column(db.Integer)
+    sex = db.Column(db.String)
+    d14 = db.Column(db.Float)
+    d64 = db.Column(db.Float)
+    d74 = db.Column(db.Float)
+    d84 = db.Column(db.Float)
+    dp = db.Column(db.Float)
+    dall = db.Column(db.Float)
+    r14 = db.Column(db.Float)
+    r64 = db.Column(db.Float)
+    r74 = db.Column(db.Float)
+    r84 = db.Column(db.Float)
+    rp = db.Column(db.Float)
+    rall = db.Column(db.Float)
+    split = db.Column(db.Integer)
+    #Были ли данные изначально разделены по нужным возрастным группам
+    splitsex = db.Column(db.Integer)
+    forecast = db.Column(db.Integer)
+    #Прогнозы использовались для расчетов показателей смертности
+
+    def __repr__(self):
+        return '<Mortality1>' % self.id
+    def __str__(self):
+        return f"Mortality1({self.id, self.country, self.sex})"
 
 
 class User(UserMixin, db.Model):
@@ -117,6 +150,15 @@ def index():
 @app.route('/databases')
 def databases():
     return render_template('databases.html')
+
+@app.route('/databases/<name_db>')
+def show_db(name_db):
+    if name_db == "mortality":
+        rows = Mortality1.query.limit(20).all()
+        rows_new = [("id", "Страна", "Год", "Неделя", "Пол", "Кол-во смертей в неделю (0-14 л.)", "Кол-во смертей в неделю (15-64 л.)", "Кол-во смертей в неделю (65-74 л.)", "Кол-во смертей в неделю (75-84 л.)", "Кол-во смертей в неделю (85+ л.)", "Всего смертей", "Коэффициент смертности (0-14 л.)", "Коэффициент смертности (15-64 л.)", "Коэффициент смертности (65-74 л.)", "Коэффициент смертности (75-84 л.)", "Коэффициент смертности (85+ л.)", "Коэффициент смертности (Общий)", "Деление по возрасту", "Деление по полу", "Ипользование прогнозов" )] + [(row.id, row.country, row.year, row.week, row.sex, row.d14, row.d64, row.d74, row.d84, row.dp, row.dall, row.r14, row.r64, row.r74, row.r84, row.rp, row.rall, row.split, row.splitsex, row.forecast) for row in rows]
+        return render_template('show_database.html', database_name="Mortality DB", db=rows_new)
+    else:
+        return "Нет такой бд"
 
 
 @app.route('/contact')
