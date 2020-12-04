@@ -7,7 +7,8 @@ Info
 {% block body%}
 <form action="" method="post" class="from-info">
 {{ form.hidden_tag() }}
-    <p>{{ form.info.label}} {{form.info()}}
+    <p>{{ form.info.label}} {{form.info(placeholder='placeholder')}}
     <p>{{ form.submit() }}
 </form>
+<input type="button" onclick="history.back();" value="Назад"/>
 {% endblock%}

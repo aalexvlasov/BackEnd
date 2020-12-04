@@ -98,7 +98,7 @@ def infosend():
         db.session.commit()
         return render_template('lk.html', info=current_user.info, name=current_user.username, email=current_user.email,
                                date=current_user.date)
-    return render_template('info.html', form=form)
+    return render_template('info.html', form=form, info=current_user.info)
 
 @login_manager.user_loader
 def load_user(user_id):
