@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title%}
+Info
+{% endblock%}
+
+{% block body%}
+<form action="" method="post" class="from-info">
+{{ form.hidden_tag() }}
+    <p>{{ form.info.label}} {{form.info()}}
+    <p>{{ form.submit() }}
+</form>
+{% endblock%}

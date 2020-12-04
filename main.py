@@ -5,13 +5,13 @@ from datetime import datetime
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, PasswordField
+from wtforms import StringField, SubmitField, PasswordField, TextAreaField
 from wtforms.validators import DataRequired, Email, Length, EqualTo
 
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'secretkey'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///blog.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
 app.config['SQLALCHEMY_BINDS'] = {
    'mortality1': 'sqlite:///mortality1.db'
 }
@@ -55,9 +55,10 @@ class Mortality1(db.Model):
 
 class User(UserMixin, db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(50), unique=True)
+    username = db.Column(db.String(100), unique=True)
     email = db.Column(db.String(50), unique=True)
-    psw = db.Column(db.String(500), nullable=True)
+    psw = db.Column(db.String(100), nullable=True)
+    info = db.Column(db.String(500), default='')
     date = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):
@@ -66,7 +67,7 @@ class User(UserMixin, db.Model):
 class LoginForm(FlaskForm):
     email = StringField("Email: ", validators=[Email("Некорректный email")])
     psw = PasswordField("Пароль: ", validators=[DataRequired(),
-                                                Length(min=6, max=100, message="Пароль должен быть от 6 до 100 символов")])
+                                                Length(min=6, max=100, message="Некорректный пароль")])
     submit = SubmitField("Войти")
 
 
@@ -79,6 +80,25 @@ class RegisterForm(FlaskForm):
     psw2 = PasswordField("Повтор пароля: ", validators=[DataRequired(), EqualTo('psw', message="Пароли не совпадают")])
     submit = SubmitField("Регистрация")
 
+
+class InfoForm(FlaskForm):
+    info = TextAreaField("О себе")
+    submit = SubmitField("Изменить")
+
+
+@app.route('/info', methods=('POST', 'GET'))
+def infosend():
+    form = InfoForm()
+    if form.validate_on_submit():
+        user = User.query.filter_by(id=current_user.id).first()
+        user.info = form.info.data
+        i = User(info=current_user.info)
+        db.session.add(i)
+        db.session.flush()
+        db.session.commit()
+        return render_template('lk.html', info=current_user.info, name=current_user.username, email=current_user.email,
+                               date=current_user.date)
+    return render_template('info.html', form=form)
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -132,7 +152,7 @@ def login():
 @app.route('/lk/<id_lk>')
 @login_required
 def lk(id_lk):
-    return render_template('lk.html', name=current_user.username, email=current_user.email, date=current_user.date)
+    return render_template('lk.html', info=current_user.info, name=current_user.username, email=current_user.email, date=current_user.date)
 
 
 @app.route('/logout')
