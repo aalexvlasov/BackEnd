@@ -5,10 +5,21 @@ Info
 {% endblock%}
 
 {% block body%}
-<form action="" method="post" class="from-info">
+<form action="/info" method="POST" class="iinfor">
+    <p><label>О себе: </label> <input type = "text" name = "info" value = {{info}}>
+    <p><input type="submit" value="Сохранить">
+</form>
+<br>
+
+
+
+<input type="button" onclick="history.back();" value="Назад"/>
+
+
+
+{% endblock%}
+<!--<form action="" method="post" class="from-info">
 {{ form.hidden_tag() }}
     <p>{{ form.info.label}} {{form.info(placeholder='placeholder')}}
     <p>{{ form.submit() }}
-</form>
-<input type="button" onclick="history.back();" value="Назад"/>
-{% endblock%}
+</form>-->

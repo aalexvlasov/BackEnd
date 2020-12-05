@@ -5,7 +5,7 @@ from datetime import datetime
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user, current_user
 from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, PasswordField, TextAreaField
+from wtforms import StringField, SubmitField, PasswordField
 from wtforms.validators import DataRequired, Email, Length, EqualTo
 
 
@@ -81,24 +81,27 @@ class RegisterForm(FlaskForm):
     submit = SubmitField("Регистрация")
 
 
-class InfoForm(FlaskForm):
-    info = TextAreaField("О себе")
-    submit = SubmitField("Изменить")
+#class InfoForm(FlaskForm):
+#    info = TextAreaField("О себе")
+#    submit = SubmitField("Изменить")
 
 
-@app.route('/info', methods=('POST', 'GET'))
-def infosend():
-    form = InfoForm()
-    if form.validate_on_submit():
+@app.route('/info', methods=["POST", "GET"])
+def info():
+    #form = InfoForm()
+    #if form.validate_on_submit():
+    if request.method == "POST":
+
         user = User.query.filter_by(id=current_user.id).first()
-        user.info = form.info.data
-        i = User(info=current_user.info)
-        db.session.add(i)
-        db.session.flush()
+        #user.info = form.info.data
+        print(request.form['info'])
+        user.info = request.form['info']
         db.session.commit()
+        # change return below
         return render_template('lk.html', info=current_user.info, name=current_user.username, email=current_user.email,
                                date=current_user.date)
-    return render_template('info.html', form=form, info=current_user.info)
+    return render_template('info.html', info=current_user.info)
+    #return render_template('info.html', form=form, info=current_user.info)
 
 @login_manager.user_loader
 def load_user(user_id):
@@ -152,6 +155,7 @@ def login():
 @app.route('/lk/<id_lk>')
 @login_required
 def lk(id_lk):
+
     return render_template('lk.html', info=current_user.info, name=current_user.username, email=current_user.email, date=current_user.date)
 
 
@@ -167,8 +171,10 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/databases')
+@app.route('/databases', methods=['POST', 'GET'])
 def databases():
+    if request.method == "POST":
+        return redirect(url_for('show_db', name_db=request.form['poisk']))
     return render_template('databases.html')
 
 @app.route('/databases/<name_db>')
