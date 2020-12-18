@@ -1,21 +1,69 @@
 {% extends 'base.html' %}
 
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css//Desktop 5.css')}}"/>
+{% endblock %}
+
 {% block title%}
 Database - {{ database_name }}
 {% endblock%}
+<!--
+<div class="main">
+    <h1>Database - {{ database_name }}</h1>
+    <div>
+        <table class="table table-dark">
+            {% for row in db %}
+            <tr>
+                {% for val in row %}
+                <td>{{ val }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+    <hr> -->
 
 {% block body%}
-<h1>Database - {{ database_name }}</h1>
-<div>
-    <table class="table table-dark">
-        {% for row in db %}
-        <tr>
-            {% for val in row %}
-            <td>{{ val }}</td>
-            {% endfor %}
-        </tr>
-        {% endfor %}
-    </table>
+    <div class="menu-union">
+        <div class="menu-column"></div>
+        <a href ="" class="menu-element">
+            <div class="menu-row-1"></div>
+            <div class="menu-row-2"></div>
+            <div class="menu-row-3"></div>
+        </a>
+        <a href="https://spb.hse.ru" class="hse-logo"></a>
+    </div>
+
+    <div class="db">
+        <span class="db-name">База данных “Family database”</span>
+    </div>
+    <div class="db-buttons">
+        <a href="" class="db-pdf"></a>
+        <div href="" class="db-comparison">
+            <a href="" class="db-comparison-text">Сравнить</a>
+        </div>
+    </div>
+
+    <div class="enter">
+        <a href="" class="enter-text">Войти</a>
+    </div>
+
+    <div class="lang">
+        <a href="" class="lang-text">ENG</a>
+    </div>
+
+    <div class="db-abstract">Аннотация</div>
+    <div class="db-authors-institution">
+        <span class="db-authors">Авторы:</span>
+        <span class="db-institution">Институт:</span>
+    </div>
+    <div class="table-5"></div>
+    <span class="table-name">Table</span>
+
+    <div class="filters">
+        <span class="filters-title">Фильтры</span>
+        <a href="" class="filters-country">Страна</a>
+        <a href="" class="filters-indicators">Показатели</a>
+    </div>
 </div>
-<hr>
 {% endblock %}

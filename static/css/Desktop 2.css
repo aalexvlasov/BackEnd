@@ -1,0 +1,533 @@
+* {
+  overflow-x: hidden;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.menu-column {
+  width: 109px;
+  height: 100%;
+  background: rgba(172,172,172,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.menu-element {
+  width: 33px;
+  height: 31px;
+  background: url("../images/v53_110.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 129px;
+  left: 38px;
+  overflow: hidden;
+}
+.menu-row-1 {
+  width: 33px;
+  height: 4px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.menu-row-2 {
+  width: 33px;
+  height: 4px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: absolute;
+  top: 13px;
+  left: 0px;
+}
+.menu-row-3 {
+  width: 33px;
+  height: 4px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: absolute;
+  top: 26px;
+  left: 0px;
+}
+.hse-logo {
+  width: 100px;
+  height: 100px;
+  background: url("../images/hse-logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  overflow: hidden;
+}
+
+.databases-title {
+  width: 257px;
+  color: rgba(0,67,126,1);
+  position: absolute;
+  top: 32px;
+  left: 454px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Nunito;
+  font-weight: SemiBold;
+  font-size: 36px;
+  opacity: 1;
+  text-align: left;
+}
+
+.database-1-inf {
+  width: 1950px;
+  height: 100px;
+  position: absolute;
+  top: 200px;
+  left: 178px;
+  opacity: 1;
+}
+.database-1-name{
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+.database-1-resource{
+  top: 38px;
+  left: 0px;
+  position: absolute;
+}
+.database-1-abstract{
+  top: 20px;
+  left: 0px;
+  position: absolute;
+}
+.database-1-comparison {
+  width: 78px;
+  height: 22px;
+  background: url("../images/v53_83.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 16px;
+  left: 550px;
+  overflow: hidden;
+}
+.database-1-comparison-rectangle {
+  width: 78px;
+  height: 22px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  border: 0.5px solid rgba(0,0,0,1);
+  overflow: hidden;
+}
+.database-1-comparison-text {
+  width: 46px;
+  color: rgba(221,32,37,1);
+  position: absolute;
+  top: 5px;
+  left: 18px;
+  font-family: Nunito;
+  font-weight: SemiBold;
+  font-size: 9px;
+  opacity: 1;
+  text-align: left;
+}
+.database-pdf-1 {
+  width: 46px;
+  height: 48px;
+  background: url("../images/pdf-logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  left: 650px;
+  overflow: hidden;
+}
+
+.database-2-inf {
+  width: 1950px;
+  height: 100px;
+  position: absolute;
+  top: 300px;
+  left: 178px;
+  opacity: 1;
+}
+.database-2-name{
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+.database-2-resource{
+  top: 38px;
+  left: 0px;
+  position: absolute;
+}
+.database-2-abstract{
+  top: 20px;
+  left: 0px;
+  position: absolute;
+}
+.database-2-comparison {
+  width: 78px;
+  height: 22px;
+  background: url("../images/v53_83.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 16px;
+  left: 550px;
+  overflow: hidden;
+}
+.database-2-comparison-rectangle {
+  width: 78px;
+  height: 22px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  border: 0.5px solid rgba(0,0,0,1);
+  overflow: hidden;
+}
+.database-2-comparison-text {
+  width: 46px;
+  color: rgba(221,32,37,1);
+  position: absolute;
+  top: 5px;
+  left: 18px;
+  font-family: Nunito;
+  font-weight: SemiBold;
+  font-size: 9px;
+  opacity: 1;
+  text-align: left;
+}
+.database-pdf-2 {
+  width: 46px;
+  height: 48px;
+  background: url("../images/pdf-logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  left: 650px;
+  overflow: hidden;
+}
+
+.database-3-inf {
+  width: 1950px;
+  height: 100px;
+  position: absolute;
+  top: 400px;
+  left: 178px;
+  opacity: 1;
+}
+.database-3-name{
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+.database-3-resource{
+  top: 38px;
+  left: 0px;
+  position: absolute;
+}
+.database-3-abstract{
+  top: 20px;
+  left: 0px;
+  position: absolute;
+}
+.database-3-comparison {
+  width: 78px;
+  height: 22px;
+  background: url("../images/v53_83.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 16px;
+  left: 550px;
+  overflow: hidden;
+}
+.database-3-comparison-rectangle {
+  width: 78px;
+  height: 22px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  border: 0.5px solid rgba(0,0,0,1);
+  overflow: hidden;
+}
+.database-3-comparison-text {
+  width: 46px;
+  color: rgba(221,32,37,1);
+  position: absolute;
+  top: 5px;
+  left: 18px;
+  font-family: Nunito;
+  font-weight: SemiBold;
+  font-size: 9px;
+  opacity: 1;
+  text-align: left;
+}
+.database-pdf-3 {
+  width: 46px;
+  height: 48px;
+  background: url("../images/pdf-logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  left: 650px;
+  overflow: hidden;
+}
+
+.database-4-inf {
+  width: 1950px;
+  height: 100px;
+  position: absolute;
+  top: 500px;
+  left: 178px;
+  opacity: 1;
+}
+.database-4-name{
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+.database-4-resource{
+  top: 38px;
+  left: 0px;
+  position: absolute;
+}
+.database-4-abstract{
+  top: 20px;
+  left: 0px;
+  position: absolute;
+}
+.database-4-comparison {
+  width: 78px;
+  height: 22px;
+  background: url("../images/v53_83.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 16px;
+  left: 550px;
+  overflow: hidden;
+}
+.database-4-comparison-rectangle {
+  width: 78px;
+  height: 22px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  border: 0.5px solid rgba(0,0,0,1);
+  overflow: hidden;
+}
+.database-4-comparison-text {
+  width: 46px;
+  color: rgba(221,32,37,1);
+  position: absolute;
+  top: 5px;
+  left: 18px;
+  font-family: Nunito;
+  font-weight: SemiBold;
+  font-size: 9px;
+  opacity: 1;
+  text-align: left;
+}
+.database-pdf-4 {
+  width: 46px;
+  height: 48px;
+  background: url("../images/pdf-logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  left: 650px;
+  overflow: hidden;
+}
+
+.database-5-inf {
+  width: 1950px;
+  height: 100px;
+  position: absolute;
+  top: 600px;
+  left: 178px;
+  opacity: 1;
+}
+.database-5-name{
+  top: 0px;
+  left: 0px;
+  position: absolute;
+}
+.database-5-resource{
+  top: 38px;
+  left: 0px;
+  position: absolute;
+}
+.database-5-abstract{
+  top: 20px;
+  left: 0px;
+  position: absolute;
+}
+.database-5-comparison {
+  width: 78px;
+  height: 22px;
+  background: url("../images/v53_83.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 16px;
+  left: 550px;
+  overflow: hidden;
+}
+.database-5-comparison-rectangle {
+  width: 78px;
+  height: 22px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  border: 0.5px solid rgba(0,0,0,1);
+  overflow: hidden;
+}
+.database-5-comparison-text {
+  width: 46px;
+  color: rgba(221,32,37,1);
+  position: absolute;
+  top: 5px;
+  left: 18px;
+  font-family: Nunito;
+  font-weight: SemiBold;
+  font-size: 9px;
+  opacity: 1;
+  text-align: left;
+}
+.database-pdf-5 {
+  width: 46px;
+  height: 48px;
+  background: url("../images/pdf-logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  left: 650px;
+  overflow: hidden;
+}
+
+.search-bar {
+  width: 660px;
+  height: 82px;
+  background: url("../images/v53_47.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 90px;
+  left: 227px;
+  overflow: hidden;
+}
+.search-bar-shadow {
+  width: 660px;
+  height: 82px;
+  background: url("../images/v7_41.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.search-bar-border {
+  width: 652px;
+  height: 42px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  border: 0.20000000298023224px solid rgba(0,0,0,1);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+.advanced-search {
+  width: 157px;
+  color: rgba(0,90,171,1);
+  position: absolute;
+  top: 57px;
+  left: 247px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Nunito;
+  font-weight: SemiBold;
+  font-size: 14px;
+  opacity: 1;
+  text-align: left;
+}
+.search_img {
+  width: 39px;
+  height: 35px;
+  background: url("../images/search-img.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 5px;
+  left: 605px;
+  overflow: hidden;
+}
+.search-query {
+  width: 87px;
+  color: rgba(179,176,176,1);
+  position: absolute;
+  top: 11px;
+  left: 14px;
+  font-family: Nunito;
+  font-weight: SemiBold;
+  font-size: 18px;
+  opacity: 1;
+  text-align: left;
+}

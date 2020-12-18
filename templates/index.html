@@ -1,9 +1,54 @@
 {% extends 'base.html' %}
 
-{% block title%}
-Main page
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css//Desktop 1.css')}}"/>
+{% endblock %}
+
+{% block title %}
+MAIN PAGE
 {% endblock%}
 
-{% block body%}
-<h1>The main page</h1>
-{% endblock%}
+{% block body %}
+<div class="main">
+    <div class="menu-union">
+        <div class="menu-column"></div>
+        <a href ="" class="menu-element">
+            <div class="menu-row-1"></div>
+            <div class="menu-row-2"></div>
+            <div class="menu-row-3"></div>
+        </a>
+        <a href="https://spb.hse.ru" class="hse-logo"></a>
+    </div>
+
+    <span class="organisation">Институт демографии/департамент Социологии
+                Москва
+                Санкт-Петербург</span>
+
+    <div class="enter">
+        <a href="/register" class="enter-text">Войти</a>
+    </div>
+
+    <div class="lang">
+        <a href="" class="lang-text">ENG</a>
+    </div>
+
+    <div class="search-bar">
+        <div class="search-bar-shadow">
+            <div class="search-bar-border"></div>
+        </div>
+        <a href="" class="advanced-search">Расширенный поиск</a>
+        <a class="search-query">Поиск...</a>
+        <a href="https://spb.hse.ru" class="search_img"></a>
+    </div>
+
+    <div class="parameters">
+        <span>Параметры:</span>
+        <a href="" class="year">год</a>
+        <a href="" class="country">страна</a>
+        <a href="" class="indicators">показатели</a>
+        <a href="" class="source">источник</a>
+    </div>
+
+
+</div>
+{% endblock %}

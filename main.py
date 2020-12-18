@@ -197,5 +197,10 @@ def about():
     return render_template('about.html')
 
 
+@app.route('/constructor')
+def constructor():
+    return render_template('constructor.html')
+
+
 if __name__ == '__main__':
     app.run(debug=True)

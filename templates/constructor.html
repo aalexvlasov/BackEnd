@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css//Desktop 4.css')}}"/>
+{% endblock %}
+
+{% block title %}
+Konstructor
+{% endblock%}
+
+{% block body %}
+<div class="main">
+    <div class="menu-union">
+        <div class="menu-column"></div>
+        <a href ="" class="menu-element">
+            <div class="menu-row-1"></div>
+            <div class="menu-row-2"></div>
+            <div class="menu-row-3"></div>
+        </a>
+        <a href="https://spb.hse.ru" class="hse-logo"></a>
+    </div>
+
+    <span class="constructor-title">Конструктор</span>
+    <div class="factors-union">
+        <a class="factors-text">Факторы:</a>
+        <div class="factors">
+            <div class="country">
+                <a class="country-text">Страна</a>
+            </div>
+            <div class="year">
+                <a class="year-text">Год</a>
+            </div>
+            <div class="age">
+                <a class="age-text">Возраст</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-4"></div>
+    <div class="graph-1"></div>
+    <div class="graph-2"></div>
+</div>
+{% endblock%}

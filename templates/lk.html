@@ -1,22 +1,54 @@
 {% extends 'base.html' %}
 
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css//Desktop 3.css')}}"/>
+{% endblock %}
+
 {% block title%}
 LK
 {% endblock%}
 
 {% block body%}
-<h1>Привет!</h1>
+<!--<h1>Привет!</h1>
 <div>
     <ul>name: {{ name }}</ul>
     <ul>email: {{ email }}</ul>
     <ul>date: {{ date }}</ul>
-    <ul>о себе: {{info}}</ul>
 </div>
-
 <hr>
 <div>
-    <a href="/info"> Изменить информацию о себе  </a>
-    <hr>
     <a href="/logout"> Выход </a>
 </div>
+-->
+ <div class="main">
+     <div class="menu-union">
+         <div class="menu-column"></div>
+         <div class="menu-element">
+             <div class="menu-row-1"></div>
+             <div class="menu-row-2"></div>
+             <div class="menu-row-3"></div>
+         </div>
+         <a href="https://spb.hse.ru" class="hse-logo"></a>
+     </div>
+
+     <span class="personal-area-title">Личный кабинет</span>
+
+     <div class="area-comparison"></div>
+
+     <div class="history"> История:
+         <div class="history-rows">
+             <a class="row-1">1. 05/12/2020 - Таблица создана (Год | Смертность)</a>
+             <a class="row-2">2. </a>
+             <a class="row-3">3. </a>
+             <a class="row-4">4. </a>
+             <a class="row-5">5. </a>
+             <a class="row-6">6. </a>
+             <a class="row-7">7. </a>
+             <a class="row-8">8. </a>
+             <a class="row-9">9. </a>
+             <a class="row-10">10. </a>
+         </div>
+     </div>
+ </div>
+
 {% endblock %}

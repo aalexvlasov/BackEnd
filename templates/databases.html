@@ -1,59 +1,99 @@
 {% extends 'base.html' %}
 
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{{url_for('static', filename='css//Desktop 2.css')}}"/>
+{% endblock %}
+
 {% block title%}
 Databases
 {% endblock%}
 
 {% block body%}
-<h1>The list of databases</h1>
-<form action="" method="POST" class="poisk">
-  <input type="text" name="poisk">
-  <input type="submit" value="Найти">
-</form>
-<div class="col-md-12">
-	<div class="card card-warning">
-		<div class="card-header"> <a href="/databases/mortality"> Смертность </a> </div>
-		<div class="card-body"> Описание </div>
+<div class="main">
+	<div class="menu-union">
+		<div class="menu-column"></div>
+		<a href ="" class="menu-element">
+			<div class="menu-row-1"></div>
+			<div class="menu-row-2"></div>
+			<div class="menu-row-3"></div>
+		</a>
+		<a href="https://spb.hse.ru" class="hse-logo"></a>
 	</div>
-    <br>
-    <div class="card card-warning">
-		<div class="card-header"> <a href="#"> Название2 </a> </div>
-		<div class="card-body"> Описание </div>
+
+	<span class="databases-title">Базы Данных</span>
+
+	<div class="database-1-inf">
+		<span class="database-1-name"> Cмертность </span>
+		<a href="/databases/mortality" class="database-1-resource"> Ссылка </a>
+		<a href="" class="database-1-abstract"> Аннотация </a>
+
+		<div class="database-1-comparison">
+			<div class="database-1-comparison-rectangle"></div>
+			<a class="database-1-comparison-text">Сравнение</a>
+		</div>
+
+		<a href="" class="database-pdf-1"></a>
 	</div>
-    <br>
-    <div class="card card-warning">
-		<div class="card-header"> <a href="#">  Название3 </a> </div>
-		<div class="card-body"> Описание </div>
+
+	<div class="database-2-inf">
+		<span class="database-2-name"> Название базы данных </span>
+		<a href="" class="database-2-resource"> Ссылка </a>
+		<a href="" class="database-2-abstract"> Аннотация </a>
+
+		<div class="database-2-comparison">
+			<div class="database-2-comparison-rectangle"></div>
+			<a class="database-2-comparison-text">Сравнение</a>
+		</div>
+
+		<a href="" class="database-pdf-2"></a>
 	</div>
-	<br>
-    <div class="card card-warning">
-		<div class="card-header"> <a href="#">  Название4 </a> </div>
-		<div class="card-body"> Описание </div>
+
+	<div class="database-3-inf">
+		<span class="database-3-name"> Название базы данных </span>
+		<a href="" class="database-3-resource"> Ссылка </a>
+		<a href="" class="database-3-abstract"> Аннотация </a>
+
+		<div class="database-3-comparison">
+			<div class="database-3-comparison-rectangle"></div>
+			<a class="database-3-comparison-text">Сравнение</a>
+		</div>
+
+		<a href="" class="database-pdf-3"></a>
 	</div>
-	<br>
-    <div class="card card-warning">
-		<div class="card-header"> <a href="#">  Название5 </a> </div>
-		<div class="card-body"> Описание </div>
+
+	<div class="database-4-inf">
+		<span class="database-4-name"> Название базы данных </span>
+		<a href="" class="database-4-resource"> Ссылка </a>
+		<a href="" class="database-4-abstract"> Аннотация </a>
+
+		<div class="database-4-comparison">
+			<div class="database-4-comparison-rectangle"></div>
+			<a class="database-4-comparison-text">Сравнение</a>
+		</div>
+
+		<a href="" class="database-pdf-4"></a>
 	</div>
-	<br>
-    <div class="card card-warning">
-		<div class="card-header"> <a href="#">  Название6 </a> </div>
-		<div class="card-body"> Описание </div>
+
+	<div class="database-5-inf">
+		<span class="database-5-name"> Название базы данных </span>
+		<a href="" class="database-5-resource"> Ссылка </a>
+		<a href="" class="database-5-abstract"> Аннотация </a>
+
+		<div class="database-5-comparison">
+			<div class="database-5-comparison-rectangle"></div>
+			<a class="database-5-comparison-text">Сравнение</a>
+		</div>
+
+		<a href="" class="database-pdf-5"></a>
 	</div>
-	<br>
-    <div class="card card-warning">
-		<div class="card-header"> <a href="#">  Название7 </a> </div>
-		<div class="card-body"> Описание </div>
-	</div>
-	<br>
-    <div class="card card-warning">
-		<div class="card-header"> <a href="#">  Название8 </a> </div>
-		<div class="card-body"> Описание </div>
-	</div>
-	<br>
-    <div class="card card-warning">
-		<div class="card-header"> <a href="#">  Название9 </a> </div>
-		<div class="card-body"> Описание </div>
+
+	<div class="search-bar">
+		<div class="search-bar-shadow">
+			<div class="search-bar-border"></div>
+		</div>
+		<a href="" class="advanced-search">Расширенный поиск</a>
+		<a class="search-query">Поиск...</a>
+		<a href="https://spb.hse.ru" class="search_img"></a>
 	</div>
 </div>
 {% endblock%}

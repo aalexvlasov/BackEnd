@@ -1,0 +1,245 @@
+* {
+  overflow-x: hidden;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.menu-column {
+  width: 109px;
+  height: 100%;
+  background: rgba(172,172,172,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+}
+.menu-element {
+  width: 33px;
+  height: 31px;
+  background: url("../images/v53_110.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 129px;
+  left: 38px;
+  overflow: hidden;
+}
+.menu-row-1 {
+  width: 33px;
+  height: 4px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.menu-row-2 {
+  width: 33px;
+  height: 4px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: absolute;
+  top: 13px;
+  left: 0px;
+}
+.menu-row-3 {
+  width: 33px;
+  height: 4px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: absolute;
+  top: 26px;
+  left: 0px;
+}
+.hse-logo {
+  width: 100px;
+  height: 100px;
+  background: url("../images/hse-logo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  opacity: 1;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  overflow: hidden;
+}
+
+.personal-area-title {
+  width: 354px;
+  color: rgba(0,66,126,1);
+  position: absolute;
+  top: 22px;
+  left: 420px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Nunito;
+  font-weight: SemiBold;
+  font-size: 36px;
+  opacity: 1;
+  text-align: left;
+}
+.area-comparison {
+  width: 833px;
+  height: 198px;
+  background: rgba(255,255,255,1);
+  opacity: 1;
+  position: absolute;
+  top: 90px;
+  left: 148px;
+  border: 0.5px solid rgba(0,0,0,1);
+  overflow: hidden;
+}
+
+.history {
+  width: 1000px;
+  height: 1000px;
+  color: rgba(0,66,126,1);
+  position: absolute;
+  top: 310px;
+  left: 150px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 22px;
+  opacity: 1;
+  text-align: left;
+}
+.history-rows{
+  width: 1000px;
+  height: 1000px;
+  position: absolute;
+  top: 5px;
+  left: 0px;
+  opacity: 1;   
+}
+.row-1 {
+  width: 827px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 15px;
+  opacity: 1;
+  text-align: left;
+}
+.row-2 {
+  width: 827px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 55px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 15px;
+  opacity: 1;
+  text-align: left;
+}
+.row-3 {
+  width: 827px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 80px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 15px;
+  opacity: 1;
+  text-align: left;
+}
+.row-4 {
+  width: 827px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 105px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 15px;
+  opacity: 1;
+  text-align: left;
+}
+.row-5 {
+  width: 827px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 130px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 15px;
+  opacity: 1;
+  text-align: left;
+}
+.row-6 {
+  width: 827px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 155px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 15px;
+  opacity: 1;
+  text-align: left;
+}
+.row-7 {
+  width: 827px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 180px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 15px;
+  opacity: 1;
+  text-align: left;
+}
+.row-8 {
+  width: 827px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 205px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 15px;
+  opacity: 1;
+  text-align: left;
+}
+.row-9 {
+  width: 827px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 230px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 15px;
+  opacity: 1;
+  text-align: left;
+}
+.row-10 {
+  width: 827px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 255px;
+  left: 0px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 15px;
+  opacity: 1;
+  text-align: left;
+}
